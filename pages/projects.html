@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Griffin Munhall</title>
+    <link rel="stylesheet" href="../css/pages/common.css">
+    <link rel="stylesheet" href="../css/pages/projects.css">
+    <link rel="stylesheet" href="../css/pages/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="name">
+                <a href="../index.html">Griffin Munhall</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="writing.html">Writing</a></li>
+                    <li><a href="../assets/documents/resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-line"></div>
+    </header>
+
+    <main class="content content-with-sidebar">
+        <aside class="filter-sidebar">
+            <div class="filter-section">
+                <h2 class="page-title">Projects</h2>
+                <div class="category-filters">
+                    <button class="category-btn" data-filter="all">All Projects</button>
+                    <button class="category-btn" data-filter="misinfo">Misinformation</button>
+                    <button class="category-btn" data-filter="QoL">Quality of Life</button>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content">
+    <div class="writing-grid">
+        <!-- Read More Section -->
+        <div class="read-more-section" id="read-more-section" style="display: none;">
+            <h2>Project Details</h2>
+            <p>Here you can talk about the project in more detail.</p>
+        </div>
+                <!-- Project Card 1 -->
+                <div class="writing-card" data-tags="misinfo">
+                    <a href="Projects Files/mapping-bias-in-journalism.html" class="writing-image-link">
+                        <div class="writing-image">
+                            <img src="../assets/images/media-bias-chart.jpeg" alt="Project 1">
+                        </div>
+                    </a>
+                    <div class="writing-content">
+                        <a href="Projects Files/mapping-bias-in-journalism.html" class="project-title-link">
+                            <h3>Mapping Bias in Journalism</h3>
+                        </a>
+                        <p>A classification method for quanitfying a news sources political bias on a left-extreme to right-extreme spectrum</p>
+                        <div class="writing-tags">
+                            <span class="tag">Misinformation</span>
+                            <span class="tag">Personal Project</span>
+                        </div>
+                    <a href="Projects Files/mapping-bias-in-journalism.html" class="read-more" data-project="media-bias-in-journalism">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="writing-card" data-tags="misinfo">
+                    <div class="writing-image">
+                        <img src="../assets/images/consensus-img.jpg" alt="Project 2">
+                    </div>
+                    <div class="writing-content">
+                        <h3>Ground Truth</h3>
+                        <p>A consensus algorithm used on political news sources to identify the most probable truth by analyzing agreement across multiple sources</p>
+                        <div class="writing-tags">
+                            <span class="tag">Misinformation</span>
+                            <span class="tag">BERT</span>
+                        </div>
+                        <a href="Projects Files/finding-consensus.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="writing-card" data-tags="misinfo">
+                    <div class="writing-image">
+                        <img src="../assets/images/placeholder.jpg" alt="Project 3">
+                    </div>
+                    <div class="writing-content">
+                        <h3>Financial Ownership Network</h3>
+                        <p>Graphing the ownership relationships in public companies through data from the SEC</p>
+                        <div class="writing-tags">
+                            <span class="tag">Misinformation</span>
+                            <span class="tag">Graph Neural Networks</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="writing-card" data-tags="QoL">
+                    <div class="writing-image">
+                        <img src="../assets/images/placeholder.jpg" alt="Project 4">
+                    </div>
+                    <div class="writing-content">
+                        <h3>Command Pilot</h3>
+                        <p>A voice-controlled application executor that uses speech recognition and an AI agent to interpret commands</p>
+                        <div class="writing-tags">
+                            <span class="tag">Quality of Life</span>
+                            <span class="tag">Speech Recognition</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="writing-card" data-tags="QoL">
+                    <div class="writing-image">
+                        <img src="../assets/images/placeholder.jpg" alt="Project 5">
+                    </div>
+                    <div class="writing-content">
+                        <h3>Copy Queue</h3>
+                        <p>A clipboard manager that queues copied text and allows users to cycle through clipboard history using shortcuts</p>
+                        <div class="writing-tags">
+                            <span class="tag">Quality of Life</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const writingCards = document.querySelectorAll('.writing-card');
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            let activeFilter = null;
+
+            function updateWritings(filter) {
+                writingCards.forEach(card => {
+                    const cardTags = card.dataset.tags.split(',');
+                    card.style.display = !filter || cardTags.includes(filter) ? 'flex' : 'none';
+                });
+            }
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    if (activeFilter === filter || filter === 'all') {
+                        activeFilter = null;
+                        categoryBtns.forEach(b => b.classList.remove('active'));
+                    } else {
+                        activeFilter = filter;
+                        categoryBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                    
+                    updateWritings(activeFilter);
+                });
+            });
+        });
+    </script>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>&copy; 2024 Griffin Munhall. All rights reserved.</p>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/projects.html">Projects</a></li>
+                        <li><a href="pages/writing.html">Writing</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/griffinmunhall" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/your-github-username" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

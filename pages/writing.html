@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing - Griffin Munhall</title>
+    <link rel="stylesheet" href="../css/pages/common.css">
+    <link rel="stylesheet" href="../css/pages/writing.css">
+    <link rel="stylesheet" href="../css/pages/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="name">
+                <a href="../index.html">Griffin Munhall</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="writing.html">Writing</a></li>
+                    <li><a href="../assets/documents/resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-line"></div>
+    </header>
+
+    <main class="content content-with-sidebar">
+        <aside class="filter-sidebar">
+            <div class="filter-section">
+                <h2 class="page-title">Writing</h2>
+                <div class="category-filters">
+                    <button class="category-btn" data-filter="tech">Technology</button>
+                    <button class="category-btn" data-filter="programming">Programming</button>
+                    <button class="category-btn" data-filter="ai">AI & Machine Learning</button>
+                    <button class="category-btn" data-filter="web">Web Development</button>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <div class="writing-grid">
+                <!-- Writing Card 1 -->
+                <div class="writing-card" data-tags="tech,article">
+                    <div class="writing-image">
+                        <img src="../assets/images/placeholder.jpg" alt="Article 1">
+                    </div>
+    <div class="writing-content-wrapper">
+        <div class="writing-content">
+                        <h3>Dopamine Starving</h3>
+                        <p>A scientific approach to effortless accomplishment</p>
+                        <div class="writing-tags">
+                            <span class="tag">Technology</span>
+                            <span class="tag">Web Dev</span>
+        </div>
+    </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Writing Card 2 -->
+                <div class="writing-card" data-tags="ai">
+                    <div class="writing-image">
+                        <img src="../assets/images/placeholder.jpg" alt="Article 2">
+                    </div>
+                    <div class="writing-content">
+                        <h3>Doing Less for More Happiness</h3>
+                        <p>A deep dive into the architecture and</p>
+                        <div class="writing-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Technical</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Writing Card 3 -->
+                <div class="writing-card" data-tags="programming">
+                    <div class="writing-image">
+                        <img src="../assets/images/placeholder.jpg" alt="Article 3">
+                    </div>
+                    <div class="writing-content">
+                        <h3>Mastering React Hooks</h3>
+                        <p>Comprehensive guide to using React Hooks effectively in modern web applications.</p>
+                        <div class="writing-tags">
+                            <span class="tag">Programming</span>
+                            <span class="tag">React</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Writing Card 4 -->
+                <div class="writing-card" data-tags="tech,ai">
+                    <div class="writing-image">
+                        <img src="../assets/images/placeholder.jpg" alt="Article 4">
+                    </div>
+                    <div class="writing-content">
+                        <h3>The Ethics of AI</h3>
+                        <p>Exploring the ethical implications of artificial intelligence in modern society.</p>
+                        <div class="writing-tags">
+                            <span class="tag">Technology</span>
+                            <span class="tag">AI</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const writingCards = document.querySelectorAll('.writing-card');
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            let activeFilter = null;
+
+            function updateWritings(filter) {
+                writingCards.forEach(card => {
+                    const cardTags = card.dataset.tags.split(',');
+                    card.style.display = !filter || cardTags.includes(filter) ? 'block' : 'none';
+                });
+            }
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    if (activeFilter === filter) {
+                        activeFilter = null;
+                        categoryBtns.forEach(b => b.classList.remove('active'));
+                    } else {
+                        activeFilter = filter;
+                        categoryBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                    
+                    updateWritings(activeFilter);
+                });
+            });
+        });
+    </script>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>&copy; 2024 Griffin Munhall. All rights reserved.</p>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/projects.html">Projects</a></li>
+                        <li><a href="pages/writing.html">Writing</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/griffinmunhall" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/your-github-username" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

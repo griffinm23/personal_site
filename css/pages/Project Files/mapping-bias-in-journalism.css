@@ -1,0 +1,84 @@
+/* Mapping Bias in Journalism page specific styles */
+@import url('./common.css');
+
+.project-title {
+    font-size: 44px;
+    font-weight: 700;
+    text-align: left;
+    margin: -68.5px 0 -15px 429px;
+    width: fit-content;
+}
+
+.project-line {
+    width: 66.666%;
+    margin: 80px auto 40px;
+    border-bottom: 1px solid #777;
+}
+
+.project-image {
+    display: block;
+    width: 105%;
+    margin-bottom: 40px;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 61px;
+    height: auto;
+}
+
+.project-date {
+    display: block;
+    text-align: left;
+    margin: 30px 0 0 61px;
+    color: white;
+    font-family: "Graphik", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 20px;
+}
+
+.project-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: left; /* Left-align the text */
+}
+
+.project-data {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-content p {
+    margin-bottom: 20px;
+    margin-left: 82px; /* Align text with the left side of the image */
+    margin-right: -105px; /* Align text with the right side of the image */
+}
+
+.back-button {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    padding: 100px 20px 20px 20px;
+    text-decoration: none;
+    border-radius: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 268px;
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.back-button:hover {
+    color: #D2B450; /* Highlight text with yellow on hover */
+}
+
+.back-button i {
+    margin-right: 8px;
+}
