@@ -5,88 +5,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Griffin Munhall</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/pages/common.css">
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/pages/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Quick fixes for responsive design */
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: "Graphik", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        }
+        
+        .navbar {
+            background-color: #1a1a1a !important;
+            padding: 20px 0;
+        }
+        
+        .navbar-brand {
+            color: white !important;
+            font-weight: 700;
+            font-size: 22px;
+        }
+        
+        .nav-link {
+            color: white !important;
+            margin-left: 15px;
+        }
+        
+        .navbar-brand:hover, .nav-link:hover {
+            color: #D2B450 !important;
+        }
+        
+        .header-line {
+            border-bottom: 1px solid #777;
+            margin-bottom: 30px;
+        }
+        
+        .hero-section {
+            padding: 80px 0 40px;
+        }
+        
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .intro-text {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        .featured-section {
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background-color: #1a1a1a;
+            border: none;
+            box-shadow: 0 2px 8px rgba(128, 128, 128, 0.2);
+            height: 100%;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .card-text {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            color: #D2B450;
+            font-size: 14px;
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        footer li {
+            margin-bottom: 10px;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: #D2B450;
+        }
+        
+        @media (max-width: 767px) {
+            .hero-section {
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-container">
-            <div class="name">
-                <a href="index.html">Griffin Munhall</a>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="pages/projects.html">Projects</a></li>
-                    <li><a href="pages/writing.html">Writing</a></li>
-                    <li><a href="assets/documents/resume.pdf" target="_blank">Resume</a></li>
-                    <li><a href="pages/contact.html">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Griffin Munhall</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/writing.html">Writing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="assets/documents/resume.pdf" target="_blank">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contact.html">Contact</a>
+                    </li>
                 </ul>
-            </nav>
-        </div>
-        <div class="header-line"></div>
-    </header>
-
-    <main class="content">
-        <div class="text-content">
-            <h1 class="main-title">Griffin Munhall</h1>
-            <h2 class="location">Worcester, MA</h2>
-            
-            <div class="intro-text">
-                <p>I'm interested in data science, philosophy, computer science, neuroscience, mathematics, and psychology—how they connect and, more importantly, how we can use them to improve our lives.</p>
-
-                <p>This is what I study, think about, and create.</p>
             </div>
         </div>
-        <img src="assets/images/profile.jpg" alt="Griffin Munhall" class="profile-image">
-    </main>
+    </nav>
+    <div class="header-line"></div>
 
-    <section class="featured-section">
-        <div class="featured-container">
-            <h2 class="section-title">Featured</h2>
-            <div class="featured-grid">
-                <a href="pages/Projects Files/mapping-bias-in-journalism.html" class="featured-box">
-                    <h3>Bias in Journalism</h3>
-                    <p>A classification method for quantifying bias in journalism</p>
-                    <span class="read-more">Read More →</span>
-                </a>
-                <a href="pages/writing.html" class="featured-box">
-                    <h3>Consensus</h3>
-                    <p>Description of consensus</p>
-                    <span class="read-more">Read More →</span>
-                </a>
-                <a href="assets/documents/resume.pdf" target="_blank" class="featured-box">
-                    <h3>Financial Mapping</h3>
-                    <p>Description of EDGAR Db portion</p>
-                    <span class="read-more">Read More →</span>
-                </a>
-                <a href="pages/projects.html" class="featured-box">
-                    <h3>Dopamine Fasting</h3>
-                    <p>A guideline for structuring your day-to-day</p>
-                    <span class="read-more">Read More →</span>
-                </a>
-                <a href="pages/writing.html" class="featured-box">
-                    <h3>More Happiness</h3>
-                    <p>Find more happiness in our lives by doing less</p>
-                    <span class="read-more">Read More →</span>
-                </a>
-                <a href="pages/about.html" class="featured-box">
-                    <h3>Another writing</h3>
-                    <p>Writing description</p>
-                    <span class="read-more">Read More →</span>
-                </a>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7 order-md-1 order-2">
+                    <div class="intro-text">
+                        <p>I'm interested in data science, philosophy, computer science, neuroscience, mathematics, and psychology—how they connect and, more importantly, how we can use them to improve our lives.</p>
+                        <p>This is what I study, think about, and create.</p>
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-2 order-1 text-center text-md-end mb-4 mb-md-0">
+                    <img src="assets/images/profile.jpg" alt="Griffin Munhall" class="profile-image">
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured</h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <a href="pages/Projects Files/mapping-bias-in-journalism.html" class="text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Bias in Journalism</h3>
+                                <p class="card-text">A classification method for quantifying bias in journalism</p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="pages/writing.html" class="text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Consensus</h3>
+                                <p class="card-text">Description of consensus</p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="assets/documents/resume.pdf" target="_blank" class="text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Financial Mapping</h3>
+                                <p class="card-text">Description of EDGAR Db portion</p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="pages/projects.html" class="text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Dopamine Fasting</h3>
+                                <p class="card-text">A guideline for structuring your day-to-day</p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="pages/writing.html" class="text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">More Happiness</h3>
+                                <p class="card-text">Find more happiness in our lives by doing less</p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="pages/writing.html" class="text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Another writing</h3>
+                                <p class="card-text">Writing description</p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4 mb-md-0">
                     <p>&copy; 2024 Griffin Munhall</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4 mb-md-0">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="pages/projects.html">Projects</a></li>
@@ -103,5 +285,8 @@
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

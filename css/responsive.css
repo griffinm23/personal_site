@@ -1,0 +1,485 @@
+/* Responsive CSS for scaling the website proportionally across different screen sizes */
+
+:root {
+  /* Base scaling factor relative to the reference resolution of 1668px width */
+  --scale-factor: min(1, calc(100vw / 1668));
+  
+  /* Font scaling with minimum and maximum boundaries for readability */
+  --font-scale: clamp(0.85, var(--scale-factor), 1.2);
+  
+  /* Content width scaling */
+  --content-scale: min(1, calc(100vw / 1668));
+  
+  /* Container width scaling */
+  --container-width: min(100%, 1668px);
+}
+
+/* Global scaling for all elements with fixed dimensions */
+.header-container,
+.header-line,
+.content,
+.text-content,
+.profile-image,
+.featured-container,
+.featured-grid,
+.project-title,
+.project-line,
+.project-image,
+.project-content,
+.back-button,
+.content-with-sidebar,
+.main-content,
+.writing-grid,
+.writing-card,
+.writing-image {
+  transform-origin: top left;
+  box-sizing: border-box;
+}
+
+/* Container for centering content */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header, main, section, footer {
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+/* Responsive typography */
+body, p, a, li, button, input, textarea {
+  font-size: calc(16px * var(--font-scale));
+}
+
+h1, .main-title {
+  font-size: calc(32px * var(--font-scale));
+}
+
+h2, .section-title, .project-title {
+  font-size: calc(28px * var(--font-scale));
+}
+
+h3 {
+  font-size: calc(20px * var(--font-scale));
+}
+
+.name a {
+  font-size: calc(22px * var(--font-scale));
+  font-weight: bold;
+}
+
+.nav a {
+  font-size: calc(16px * var(--font-scale));
+}
+
+.intro-text {
+  font-size: calc(28px * var(--font-scale));
+}
+
+.nav ul {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  list-style: none;
+}
+
+/* Scale fixed dimensions */
+.header-container {
+  width: 66.666%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: calc(20px * var(--scale-factor)) 0 calc(16px * var(--scale-factor));
+}
+
+.header-line {
+  width: 66.666%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: calc(110px * var(--scale-factor));
+  max-width: 1100px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: calc(100px * var(--scale-factor)) calc(20px * var(--scale-factor)) calc(80px * var(--scale-factor)) calc(20px * var(--scale-factor));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 600px;
+  margin-right: calc(60px * var(--scale-factor));
+  margin-left: calc(50px * var(--scale-factor));
+}
+
+.profile-image {
+  width: calc(300px * var(--scale-factor));
+  height: calc(300px * var(--scale-factor));
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: calc(55px * var(--scale-factor));
+  margin-top: calc(10px * var(--scale-factor));
+}
+
+.featured-section {
+  width: 100%;
+  padding: calc(60px * var(--scale-factor)) 0;
+}
+
+.featured-container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 calc(40px * var(--scale-factor));
+}
+
+.section-title {
+  margin-bottom: calc(30px * var(--scale-factor));
+  margin-left: calc(10px * var(--scale-factor));
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.featured-box {
+  padding: calc(27px * var(--scale-factor));
+  margin-bottom: calc(20px * var(--scale-factor));
+  min-height: calc(160px * var(--scale-factor));
+  box-shadow: 0 2px 8px rgba(128, 128, 128, 0.2);
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-box h3 {
+  margin: 0 0 calc(15px * var(--scale-factor)) 0;
+}
+
+.featured-box p {
+  margin: 0 0 calc(20px * var(--scale-factor)) 0;
+}
+
+/* Project page specific scaling */
+.project-title {
+  font-size: 44px;
+  margin: 80px auto 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.project-line {
+  width: 66.666%;
+  max-width: 1100px;
+  margin: 40px auto;
+  border-bottom: 1px solid #777;
+}
+
+.project-image {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.project-date {
+  margin: 30px 0 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.project-content {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.project-content p {
+  margin-bottom: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 22px;
+  margin: 30px 0 0 40px;
+}
+
+/* Projects list page scaling */
+.content-with-sidebar {
+  max-width: 1000px;
+  width: 90%;
+  margin: calc(110px * var(--scale-factor)) auto 0;
+  padding: 0 calc(20px * var(--scale-factor));
+  display: flex;
+  gap: calc(60px * var(--scale-factor));
+}
+
+.filter-sidebar {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.page-title {
+  font-size: calc(32px * var(--font-scale));
+  margin: calc(10px * var(--scale-factor)) 0 calc(30px * var(--scale-factor)) 0;
+}
+
+.category-btn {
+  margin: 0;
+  padding: calc(8px * var(--scale-factor)) 0;
+  font-size: calc(16px * var(--font-scale));
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+}
+
+.writing-grid {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(60px * var(--scale-factor));
+  margin: calc(25px * var(--scale-factor)) 0 0 0;
+}
+
+.writing-card {
+  display: flex;
+  gap: calc(30px * var(--scale-factor));
+  position: relative;
+}
+
+.writing-image {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.writing-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.writing-content {
+  flex: 1;
+}
+
+.writing-content h3 {
+  font-size: calc(26px * var(--font-scale));
+  margin: calc(5px * var(--scale-factor)) 0 calc(12px * var(--scale-factor)) 0;
+}
+
+.writing-content p {
+  margin: calc(15px * var(--scale-factor)) 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.read-more {
+  color: #D2B450;
+  font-size: calc(14px * var(--font-scale));
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  left: 310px;
+}
+
+/* Footer scaling */
+footer {
+  padding: calc(20px * var(--scale-factor)) 0;
+  margin-top: calc(2em * var(--scale-factor));
+  background-color: #1a1a1a;
+  color: #eee;
+  text-align: center;
+  width: 100%;
+}
+
+footer .container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer li {
+  margin: calc(5px * var(--scale-factor)) calc(10px * var(--scale-factor));
+  font-size: calc(0.8em * var(--font-scale));
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #D2B450;
+}
+
+/* Media queries for responsive layouts */
+@media (max-width: 1200px) {
+  .header-container, .header-line {
+    width: 80%;
+  }
+  
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .header-container, .header-line {
+    width: 90%;
+  }
+  
+  .content {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 60px 20px 40px;
+  }
+  
+  .text-content {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .profile-image {
+    margin: 0 auto;
+  }
+  
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-container {
+    padding: 0 20px;
+  }
+  
+  .content-with-sidebar {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+  }
+
+  .writing-card {
+    flex-direction: column;
+  }
+
+  .writing-image {
+    width: 100%;
+  }
+  
+  .read-more {
+    position: static;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  footer .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Additional media query for very small screens */
+@media (max-width: 480px) {
+  body, p, a, li, button, input, textarea {
+    font-size: 14px;
+  }
+  
+  h1, .main-title {
+    font-size: 28px;
+  }
+  
+  h2, .section-title {
+    font-size: 24px;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  .header-container {
+    width: 100%;
+    padding: 15px 10px;
+  }
+  
+  .header-line {
+    width: 100%;
+  }
+  
+  .nav ul {
+    gap: 0.8rem;
+  }
+  
+  .nav a {
+    font-size: 14px;
+  }
+  
+  .project-title {
+    font-size: 32px;
+  }
+  
+  .back-button {
+    margin-left: 10px;
+    padding: 20px 10px 10px;
+  }
+  
+  .project-content {
+    width: 95%;
+  }
+  
+  .project-image {
+    width: 95%;
+  }
+  
+  .writing-content h3 {
+    font-size: 22px;
+  }
+}

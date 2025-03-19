@@ -4,81 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapping Bias in Journalism - Griffin Munhall</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/pages/common.css">
     <link rel="stylesheet" href="../../css/pages/projects.css">
     <link rel="stylesheet" href="../../css/pages/Project Files/mapping-bias-in-journalism.css">
     <link rel="stylesheet" href="../../css/pages/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Quick fixes for responsive design */
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: "Graphik", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        }
+        
+        .navbar {
+            background-color: #1a1a1a !important;
+            padding: 20px 0;
+        }
+        
+        .navbar-brand {
+            color: white !important;
+            font-weight: 700;
+            font-size: 22px;
+        }
+        
+        .nav-link {
+            color: white !important;
+            margin-left: 15px;
+        }
+        
+        .navbar-brand:hover, .nav-link:hover {
+            color: #D2B450 !important;
+        }
+        
+        .header-line {
+            border-bottom: 1px solid #777;
+            margin-bottom: 30px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover {
+            color: #D2B450;
+        }
+        
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .project-title {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .project-divider {
+            width: 100px;
+            height: 3px;
+            background-color: #D2B450;
+            margin: 0 auto 40px;
+        }
+        
+        .project-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .project-date {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .project-content {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 60px;
+        }
+        
+        .project-content p {
+            margin-bottom: 25px;
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        footer li {
+            margin-bottom: 10px;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: #D2B450;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <div class="name">
-                <a href="../../index.html">Griffin Munhall</a>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../writing.html">Writing</a></li>
-                    <li><a href="../../assets/documents/resume.pdf" target="_blank">Resume</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">Griffin Munhall</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../writing.html">Writing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../assets/documents/resume.pdf" target="_blank">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
                 </ul>
-            </nav>
+            </div>
         </div>
-        <div class="header-line"></div>
-    </header>
-    <a href="javascript:history.back()" class="back-button">
-        <i class="fas fa-arrow-left"></i> Back
-    </a>
-    <h2 class="project-title">Mapping Bias in Journalism</h2>
-    <div class="project-line"></div>
-    <main class="content-with-sidebar">
-        <div class="main-content">
-            <div class="project-image">
-                <img src="../../assets/images/media-bias-chart.jpeg" alt="Mapping Bias in Journalism">
+    </nav>
+    <div class="header-line"></div>
+
+    <!-- Project Content -->
+    <div class="container mt-5">
+        <a href="javascript:history.back()" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Projects
+        </a>
+        
+        <div class="project-header">
+            <h1 class="project-title">Mapping Bias in Journalism</h1>
+            <div class="project-divider"></div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <img src="../../assets/images/media-bias-chart.jpeg" alt="Mapping Bias in Journalism" class="project-image">
                 <p class="project-date">February 5, 2025</p>
-            </div>
-            <div class="project-data">
-            </div>
-            <div class="project-content" id="project-content">
-                <p>Mapping media bias has been an exploration into how information is presented, distorted, and ultimately consumed. With today’s echo chambers and algorithm-driven filter bubbles, the way news is framed is often just as important as the information itself. This project is my attempt to quantify those biases, breaking down the subtle (and not-so-subtle) ways that news sources push narratives, often without the reader noticing.</p>
+                
+                <div class="project-content">
+                    <p>Mapping media bias has been an exploration into how information is presented, distorted, and ultimately consumed. With today's echo chambers and algorithm-driven filter bubbles, the way news is framed is often just as important as the information itself. This project is my attempt to quantify those biases, breaking down the subtle (and not-so-subtle) ways that news sources push narratives, often without the reader noticing.</p>
 
-                <p>The approach combines both human insight and AI-driven analysis, pulling in data from a range of news outlets through APIs and web scraping tools. From there, articles are processed using advanced natural language techniques to determine political leanings—whether that be a simple left-center-right classification or a more nuanced spectrum. The methodology is structured around frameworks like Media Bias/Fact Check and AllSides, while also integrating research on linguistic bias, source bias, and the contextual framing of news stories.</p>
+                    <p>The approach combines both human insight and AI-driven analysis, pulling in data from a range of news outlets through APIs and web scraping tools. From there, articles are processed using advanced natural language techniques to determine political leanings—whether that be a simple left-center-right classification or a more nuanced spectrum. The methodology is structured around frameworks like Media Bias/Fact Check and AllSides, while also integrating research on linguistic bias, source bias, and the contextual framing of news stories.</p>
 
-                <p>The data pipeline ensures that every transformation is consistent and reproducible. Articles are cleaned, tokenized, and normalized with tools like spaCy and NLTK, and additional feature extraction allows for sentiment analysis, named entity recognition, and keyword identification. The scale of modern media output demands automation, and the pipeline is designed to handle large volumes of data without sacrificing precision.</p>
+                    <p>The data pipeline ensures that every transformation is consistent and reproducible. Articles are cleaned, tokenized, and normalized with tools like spaCy and NLTK, and additional feature extraction allows for sentiment analysis, named entity recognition, and keyword identification. The scale of modern media output demands automation, and the pipeline is designed to handle large volumes of data without sacrificing precision.</p>
 
-                <p>In the modeling phase, both traditional classifiers and transformer-based architectures are tested. An optimized neural network has already produced promising results, with a test loss (MSE) of 8.6770 and a test MAE of 1.8951. While still a work in progress, these numbers suggest real potential in quantifying bias with a high level of accuracy. Of course, AI will never replace human discernment, but it offers a level of scalability that human analysis alone can’t achieve.</p>
+                    <p>In the modeling phase, both traditional classifiers and transformer-based architectures are tested. An optimized neural network has already produced promising results, with a test loss (MSE) of 8.6770 and a test MAE of 1.8951. While still a work in progress, these numbers suggest real potential in quantifying bias with a high level of accuracy. Of course, AI will never replace human discernment, but it offers a level of scalability that human analysis alone can't achieve.</p>
 
-                <p>The data pipeline ensures that every transformation is consistent and reproducible. Articles are cleaned, tokenized, and normalized with tools like spaCy and NLTK, and additional feature extraction allows for sentiment analysis, named entity recognition, and keyword identification. The scale of modern media output demands automation, and the pipeline is designed to handle large volumes of data without sacrificing precision.</p>
+                    <p>The data pipeline ensures that every transformation is consistent and reproducible. Articles are cleaned, tokenized, and normalized with tools like spaCy and NLTK, and additional feature extraction allows for sentiment analysis, named entity recognition, and keyword identification. The scale of modern media output demands automation, and the pipeline is designed to handle large volumes of data without sacrificing precision.</p>
 
-                <p>At its core, this work is about transparency. The goal isn’t to label news sources as “good” or “bad,” nor is it to tell people what to think. Instead, it’s about creating a tool that makes media consumers more aware, more critical, and ultimately, more informed. By blending AI-driven analysis with human reasoning, this project pushes toward a more thoughtful approach to news consumption—one that prioritizes truth over rhetoric and understanding over division.</p>
+                    <p>At its core, this work is about transparency. The goal isn't to label news sources as "good" or "bad," nor is it to tell people what to think. Instead, it's about creating a tool that makes media consumers more aware, more critical, and ultimately, more informed. By blending AI-driven analysis with human reasoning, this project pushes toward a more thoughtful approach to news consumption—one that prioritizes truth over rhetoric and understanding over division.</p>
+                </div>
             </div>
         </div>
-    </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const projectImage = document.querySelector('.project-image img');
-            const projectContent = document.getElementById('project-content');
+    </div>
 
-            if (projectImage && projectContent) {
-                const imageWidth = projectImage.clientWidth;
-                projectContent.style.maxWidth = `${imageWidth}px`;
-                projectContent.style.marginLeft = `calc(50% - ${imageWidth / 2}px)`;
-            }
-        });
-    </script>
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4 mb-md-0">
                     <p>&copy; 2024 Griffin Munhall. All rights reserved.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4 mb-md-0">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/projects.html">Projects</a></li>
-                        <li><a href="pages/writing.html">Writing</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../writing.html">Writing</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -90,4 +211,7 @@
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
