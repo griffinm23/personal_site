@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HTML Project Documentation
 
 ## Project Overview
@@ -28,3 +29,5 @@ To navigate the website, use the following links located in the header of each p
 
 ## Usage
 Open the `index.html` file in a web browser to view the home page. From there, you can navigate to other pages using the links in the header.
+=======
+>>>>>>> 6ca11227c65aaf7f4471bfd78491e3303d2438b8
