@@ -105,29 +105,7 @@
             font-size: 14px;
         }
         
-        footer {
-            background-color: #1a1a1a;
-            padding: 30px 0;
-            margin-top: 40px;
-        }
-        
-        footer ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        footer li {
-            margin-bottom: 10px;
-        }
-        
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            color: #D2B450;
-        }
+        /* Footer styles moved to footer.css */
         
         @media (max-width: 767px) {
             .hero-section {
@@ -154,9 +132,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="pages/projects.html">Projects</a>
                     </li>
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link" href="pages/writing.html">Writing</a>
                     </li>
+                    -->
                     <li class="nav-item">
                         <a class="nav-link" href="assets/documents/resume.pdf" target="_blank">Resume</a>
                     </li>
@@ -207,12 +187,13 @@
                         <div class="card h-100">
                             <div class="card-body">
                                 <h3 class="card-title">Consensus</h3>
-                                <p class="card-text">Description of consensus</p>
+                                <p class="card-text">A consensus algorithm used to identify truth by analyzing agreement across multiple sources</p>
                                 <span class="read-more">Read More →</span>
                             </div>
                         </div>
                     </a>
                 </div>
+                <!--
                 <div class="col-md-4 col-sm-6">
                     <a href="assets/documents/resume.pdf" target="_blank" class="text-decoration-none">
                         <div class="card h-100">
@@ -257,6 +238,7 @@
                         </div>
                     </a>
                 </div>
+                -->
             </div>
         </div>
     </section>
@@ -264,24 +246,24 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <p>&copy; 2024 Griffin Munhall</p>
+            <div class="footer-copyright">
+                <span class="year-name">&copy; 2024 Griffin</span>
+                <span class="lastname">Munhall</span>
+            </div>
+            <div class="footer-nav">
+                <div class="primary-links">
+                    <a href="index.html">Home</a>
+                    <a href="pages/projects.html">Projects</a>
                 </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/projects.html">Projects</a></li>
-                        <li><a href="pages/writing.html">Writing</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
-                    </ul>
+                <div class="secondary-links">
+                    <a href="pages/contact.html">Contact</a>
                 </div>
-                <div class="col-md-4">
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/griffinmunhall" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://github.com/your-github-username" target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/griffinmunhall" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:griffin.munhall@gmail.com" target="_blank">Email</a></li>
+                </ul>
             </div>
         </div>
     </footer>

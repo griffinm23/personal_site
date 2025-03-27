@@ -30,7 +30,7 @@ body {
   
   /* The partial-width line */
   .header-line {
-    width: 66.666%;
+    width: 76%;
     margin: 0 auto;
     border-bottom: 1px solid #777;
   }

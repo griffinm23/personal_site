@@ -1,47 +1,79 @@
 @import url('./common.css');
 footer {
-  font-family: 'Graphik', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-family: "Graphik", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #1a1a1a; /* Match body background */
   color: #eee; /* Light gray text */
   padding: 20px 0;
   text-align: center;
-  position: relative; /* Remove fixed positioning */
-  bottom: auto; /* Remove bottom positioning */
   width: 100%;
   margin-top: 2em; /* Add margin to separate from content */
-  display: flex;
-  justify-content: center;
-}
-
-footer > * {
-  margin: 0 1em;
 }
 
 footer .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Space elements evenly */
+  align-items: flex-start; /* Align to top for vertical stacking */
+  max-width: 600px; /* Wider container for better spacing */
+  margin: 0 auto; /* Center the container */
+  gap: 30px; /* Increased spacing between columns */
+}
+
+/* Copyright section styling */
+.footer-copyright {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center align items */
+  text-align: center;
+}
+
+.footer-copyright .year-name {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.footer-copyright .lastname {
+  font-size: 0.9em;
+}
+
+/* Navigation links styling */
+.footer-nav {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center align items */
+  text-align: center;
+}
+
+.footer-nav .primary-links {
+  display: flex;
+  justify-content: center; /* Center the links */
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-nav .secondary-links {
+  margin-left: 0; /* Remove indentation */
+}
+
+/* Social links styling */
+.footer-social {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center align items */
+  text-align: center;
 }
 
 footer ul {
-  font-family: 'Helvetica Neue', sans-serif;
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: center; /* Center items */
 }
 
 footer li {
-  font-family: 'Helvetica Neue', sans-serif;
-  margin: 5px 10px; /* Adjust spacing */
-  font-size: 0.8em; /* Smaller text */
+  margin-bottom: 8px;
+  font-size: 0.9em;
 }
 
 footer a {
-  font-family: 'Helvetica Neue', sans-serif;
   color: #fff;
   text-decoration: none;
 }
@@ -55,15 +87,15 @@ footer a:hover {
   footer .container {
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Center text on smaller screens */
+    gap: 20px;
   }
-
-  footer ul {
-    flex-direction: column;
-    text-align: center; /* Center text on smaller screens */
+  
+  .footer-copyright, .footer-nav, .footer-social {
+    align-items: center;
+    text-align: center;
   }
-
-  footer li {
-    margin: 5px 0;
+  
+  .footer-nav .secondary-links {
+    margin-left: 0;
   }
 }
